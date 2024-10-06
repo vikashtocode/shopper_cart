@@ -4,7 +4,10 @@
   "description": "E-commerce Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Building project...\"",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "vikash",
   "license": "ISC",
@@ -20,10 +23,11 @@
     "mongodb": "^6.8.0",
     "mongoose": "^7.7.0",
     "node": "^18.20.4",
-    "nodemon": "^3.1.7",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^8.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }
