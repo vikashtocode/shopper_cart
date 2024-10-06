@@ -1,4 +1,4 @@
-const express =require("express");
+const express = require("express");
 const router = express.Router();
 const User =require("../models/User");
 const passport = require("passport");
@@ -22,9 +22,12 @@ router.get("/register",(req,res)=>{
 
 router.post("/register",async (req,res)=>{
     const {username ,password,email} =req.body;
+    console.log("gvgjvg")
+
+    console.log(req.body);
 
     const user = new User({username,email});
-    const newUser =await User.register(user,password);
+    const newUser = await User.register(user,password);
     req.flash("success","user registered successfully!")
     res.redirect("/login")
 })
